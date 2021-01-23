@@ -1,0 +1,91 @@
+@import "./colors.module.scss";
+
+.block {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+
+  &_center {
+    @extend .flex;
+    justify-content: center;
+  }
+  &_between {
+    @extend .flex;
+    justify-content: space-between;
+  }
+}
+
+.footer_label {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: $cyan700;
+  height: 20px;
+  width: 100%;
+  border-top: $main_border__dark;
+  border-bottom: $main_border__dark;
+}
+
+.header_label {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $cyan700;
+  height: 20px;
+  width: 100%;
+  border-top: $main_border__dark;
+  border-bottom: $main_border__dark;
+}
+
+.main {
+  width: 100%;
+  margin: 0 auto;
+
+  &_container {
+    margin: 5px auto;
+    max-width: 400px;
+    min-width: 350px;
+    width: 95%;
+  }
+
+  &_position {
+    width: 100%;
+    position: absolute;
+    top: 110px;
+    left: 0px;
+    z-index: -1;
+  }
+
+  &_title {
+    margin: 8px auto 0 auto;
+    color: $cyan600;
+    font-weight: bold;
+    display: table;
+  }
+}
+
+.medium {
+  &_size {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 auto;
+  }
+
+  &_space {
+    margin: 30px;
+  }
+
+  &_width {
+    width: 80%;
+  }
+}
+
+.small_space {
+  margin: 8px;
+}

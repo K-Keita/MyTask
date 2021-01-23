@@ -1,0 +1,91 @@
+@import "../App.module.scss";
+@import "../colors.module.scss";
+
+.edit_button {
+  color: $cyan700;
+  width: 20%;
+  padding: 0;
+  margin: 0 10px 5px auto;
+  text-align: center;
+  cursor: pointer;
+  border: solid 2px $cyan500;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.m_center {
+  width: 90%;
+  margin: 0 auto;
+
+  &__flex {
+    @extend .m_center;
+    display: flex;
+  }
+}
+
+.sub {
+  &_box {
+    width: 50%;
+    padding-top: 3px;
+    margin: 5px 2px;
+
+    & > p {
+      text-align: center;
+      margin: 4px;
+      &:last-child {
+        font-weight: bold;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &_text {
+    margin: 14px auto 3px auto;
+    border-bottom: $sub_border;
+    width: 80%;
+
+    &__color {
+      margin: 14px auto 3px auto;
+      color: $cyan500;
+      width: 80%;
+    }
+
+    &__bottom {
+      font-size: 26px;
+      height: 100%;
+      margin: 5px 0 10px 25%;
+    }
+  }
+
+  &_title {
+    display: table;
+    margin: 0 auto 20px auto;
+    font-size: 12px;
+    color: $cyan500;
+  }
+}
+
+.task_box {
+  @extend .flex_between;
+
+  border-bottom: solid 1px $cyan500;
+  & > p {
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  &__center {
+    @extend .task_box;
+    width: 90%;
+    margin: 0 auto;
+    & > p {
+      padding: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.time_align {
+  font-size: 30px;
+  margin: auto 6px 2px 0;
+}

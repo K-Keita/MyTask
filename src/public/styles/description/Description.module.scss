@@ -1,0 +1,64 @@
+@import "../App.module.scss";
+@import "../colors.module.scss";
+
+.block__task {
+  display: block;
+  padding-bottom: 3px;
+  border-left: $main_border;
+  border-right: $main_border;
+  border-bottom: $main_border;
+  background-color: $cyan50;
+  font-size: 18px;
+  margin-left: 3px;
+
+  & > p {
+    margin: 0 10px;
+    padding: 3px 0 0 0;
+    border-bottom: $sub_border;
+  }
+}
+
+.description_text {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.message_container {
+  display: flex;
+  width: 100%;
+  border: $sub_border;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 2px;
+  margin: 5px auto;
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  background-color: $cyan50;
+
+  & > p {
+    margin: 0;
+  }
+}
+
+.min_card {
+  width: 70%;
+  border: solid 2px $cyan300;
+  background-color: $cyan100;
+  padding: 6px;
+  margin: 0 auto 0 15px;
+
+  &__reverse {
+    width: 70%;
+    border: solid 2px $cyan300;
+    background-color: $cyan100;
+    padding: 6px;
+    margin: 0 15px 0 auto;
+  }
+}
+
+.min_container {
+  margin: 20px auto;
+  max-width: 400px;
+}

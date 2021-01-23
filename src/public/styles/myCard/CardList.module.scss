@@ -1,0 +1,39 @@
+@import '../App.module.scss';
+@import '../colors.module.scss';
+
+.card_border {
+  width: 100%;
+  margin: 0 auto;
+  border: 3px solid $cyan300;
+  box-sizing: border-box;
+  border-radius: 2px;
+  box-shadow: 4px 3px $cyan500;
+  min-width: 350px;
+  max-width: 400px;
+  position: relative;
+  background-color: $cyan100;
+  padding: 2% 3%;
+}
+
+
+.media_flex {
+  margin: 0 auto 20px;
+  width: 95%;
+}
+
+.media_space {
+  margin-bottom: 24px;
+}
+
+@media (min-width: 500px) {
+  .media-flex {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .media-space {
+    width: 480px;
+  }
+}

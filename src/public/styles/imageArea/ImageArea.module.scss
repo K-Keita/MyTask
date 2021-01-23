@@ -1,0 +1,65 @@
+@import "../App.module.scss";
+@import '../colors.module.scss';
+
+.half_width {
+  width: 80%;
+  padding-left: 30px;
+}
+
+.icon {
+  height: 48;
+  width: 48;
+
+  &_area {
+    margin: 15px auto;
+    width: 48%;
+  }
+
+  &_box {
+    width: 30%;
+    height: 90px;
+    max-width: 80px;
+    margin-left: 3%;
+  }
+}
+
+.m_center {
+  @extend .medium_space;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.noImage_area {
+  width: 24%;
+  height: 75px;
+  max-width: 80px;
+  margin: 13px 0 0 3%;
+  border-radius: 50%;
+  background-color: $cyan400;
+}
+
+.image__thumb {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  &::before {
+    content: "";
+    margin: 5px;
+    display: block;
+    padding-top: 100%;
+  }
+
+  & > img {
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    border: solid 1px $cyan400;
+    box-sizing: border-box;
+    border-radius: 50%;
+  }
+}

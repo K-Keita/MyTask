@@ -1,0 +1,149 @@
+@import "../App.module.scss";
+@import "../colors.module.scss";
+
+.block {
+  display: block;
+
+  &__task {
+    display: block;
+    padding-bottom: 3px;
+    border-left: $main_border;
+    border-right: $main_border;
+    border-bottom: $main_border;
+    background-color: #e0f7fa;
+    font-size: 18px;
+    margin-left: 3px;
+
+    & > p {
+      margin: 0 10px;
+      padding: 3px 0 0 0;
+      border-bottom: $sub_border;
+    }
+  }
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e0f7fa;
+  border-top: $main_border;
+  border-left: $main_border;
+  border-right: $main_border;
+  font-size: 18px;
+  margin-left: 3px;
+
+  &_under {
+    @extend .box;
+    border-bottom: $main_border;
+
+    & > p {
+      padding: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.card {
+  &_border {
+    width: 100%;
+    margin: 0 auto;
+    border: 3px solid $cyan400;
+    box-sizing: border-box;
+    border-radius: 2px;
+    box-shadow: 4px 3px $cyan500;
+    min-width: 350px;
+    max-width: 400px;
+    position: relative;
+    background-color: $cyan100;
+    padding: 2% 3%;
+  }
+
+  &_name {
+    background-color: $cyan400;
+    color: #fff;
+    border-radius: 5px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+  }
+}
+
+.icon_position {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.message_container {
+  @extend .flex_between;
+
+  width: 100%;
+  border: 1px solid $secondary;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 2px;
+  margin: 5px auto;
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  background-color: $cyan50;
+
+  & > p {
+    margin: 0;
+  }
+  &_over {
+    @extend .message_container;
+    height: 26px;
+    overflow: hidden;
+  }
+}
+
+.sub {
+  width: 50%;
+  padding-top: 3px;
+  margin: 5px 2px;
+  border: solid 2px $cyan500;
+  border-radius: 5px;
+
+  & > p {
+    text-align: center;
+    margin: 4px;
+    &:last-child {
+      font-weight: bold;
+      font-size: 14px;
+    }
+  }
+}
+
+.text {
+  &_box {
+    width: 75%;
+    padding-left: 3px;
+    margin-bottom: 2px;
+
+    & > p {
+      font-size: 16px;
+      margin: 5px 0;
+      &:first-child {
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+  }
+  &_date {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    color: #0097a7;
+    margin: 0;
+  }
+}
+
+@media (min-width: 500px) {
+  .card_border {
+    max-width: 450px;
+    padding: 1% 2%;
+  }
+}

@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useSelector } from "react-redux";
+import { getIsSignedIn } from "./reducks/users/selectors";
+import { Header } from "./components/Header/index";
+import Router from "./Router";
+import styles from "./public/styles/App.module.scss";
 
-function App() {
+const App = () => {
+  const selector = useSelector((state) => state);
+  const isSignedIn = getIsSignedIn(selector);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {isSignedIn && <Header />}
+      <div className={styles.main_position}>
+        <div className={styles.main}>
+          <Router />
+        </div>
+      </div>
+    </>
   );
-}
+};
 
 export default App;
