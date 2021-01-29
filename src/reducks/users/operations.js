@@ -131,9 +131,7 @@ export const listenAuthState = () => {
 
           dispatch(fetchMyCardInfo(uid, data.username, data.icon));
           dispatch(fetchMyCard(uid));
-        } else {
-          dispatch(push("/home"))
-        }
+        } 
       } else {
         dispatch(push("/home"));
       }
